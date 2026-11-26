@@ -69,6 +69,7 @@ select = [
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**/*.py" = ["ANN"]
+"src/triggerdev/types/**/*.py" = ["TCH"]
 
 [tool.mypy]
 strict = true
