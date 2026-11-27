@@ -19,6 +19,7 @@ from triggerdev._exceptions import (
     TriggerDevError,
     UnprocessableEntityError,
 )
+from triggerdev._version import __version__
 
 __all__ = [
     "APIConnectionError",
@@ -38,6 +39,5 @@ __all__ = [
     "ServiceUnavailableError",
     "TriggerDevError",
     "UnprocessableEntityError",
+    "__version__",
 ]
-
-__version__ = "0.0.0"
