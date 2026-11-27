@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "triggerdev"
 version = "0.0.0"
-description = "The first fully typed async Python SDK for the Trigger.dev management API"
+description = "The first fully typed Python SDK for the Trigger.dev management API"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
