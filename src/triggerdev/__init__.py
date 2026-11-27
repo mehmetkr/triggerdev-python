@@ -1,4 +1,4 @@
-"""The first fully typed async Python SDK for the Trigger.dev management API."""
+"""The first fully typed Python SDK for the Trigger.dev management API."""
 
 from triggerdev._client import Client
 from triggerdev._exceptions import (
