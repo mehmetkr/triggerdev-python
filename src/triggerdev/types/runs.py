@@ -422,24 +422,89 @@ class RescheduleRunRequestBody(_ApiModel):
     delay: str | AwareDatetime | None = None
 
 
+class RunResultUsage(_ApiModel):
+    """Execution usage stats for a completed run."""
+
+    duration_ms: float | None = Field(
+        default=None,
+        alias="durationMs",
+        description="Duration of the run in milliseconds.",
+    )
+
+
+class RunResultResponse(_ApiModel):
+    """The execution result of a completed run."""
+
+    ok: bool
+    id: str
+    output: str | None = Field(
+        default=None,
+        description="Serialized output string (present when ok is true).",
+    )
+    output_type: str | None = Field(
+        default=None,
+        alias="outputType",
+        description="Content type of the serialized output.",
+    )
+    error: dict[str, Any] | None = Field(
+        default=None,
+        description="Error details (present when ok is false).",
+    )
+    usage: RunResultUsage | None = None
+    task_identifier: str | None = Field(
+        default=None,
+        alias="taskIdentifier",
+    )
+
+
+class ReplayRunResponse(_ApiModel):
+    """The new run ID returned after replaying a run."""
+
+    id: str
+
+
+class CancelRunResponse(_ApiModel):
+    """The run ID returned after canceling a run."""
+
+    id: str
+
+
+class UpdateMetadataResponse(_ApiModel):
+    """The updated metadata of a run."""
+
+    metadata: dict[str, Any]
+
+
+class AddTagsResponse(_ApiModel):
+    """Confirmation message after adding tags."""
+
+    message: str
+
+
 RunSchedule.model_rebuild()
 
 
 __all__ = [
+    "AddTagsResponse",
     "Attempt",
     "AttemptStatus",
+    "CancelRunResponse",
     "CommonRunObject",
     "ListRunItem",
     "ListRunStatus",
     "ListRunsResult",
     "RelatedRuns",
+    "ReplayRunResponse",
     "RescheduleRunRequestBody",
     "RetrieveRunResponse",
     "RunEnvironment",
+    "RunResultResponse",
+    "RunResultUsage",
     "RunSchedule",
     "RunScheduleGenerator",
     "RunStatus",
     "RunsAppliedCreatedAtFilter",
     "RunsAppliedFilters",
     "RunsPagination",
+    "UpdateMetadataResponse",
 ]
