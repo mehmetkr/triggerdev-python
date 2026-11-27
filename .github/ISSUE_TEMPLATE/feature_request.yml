@@ -1,0 +1,41 @@
+name: Feature request
+description: Suggest an improvement to the triggerdev Python library
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature. Please describe what you'd like.
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues and found no duplicate.
+          required: true
+        - label: This is a feature request for the triggerdev Python library, not the Trigger.dev API or platform.
+          required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: Describe the problem you are trying to solve or the workflow you want to improve.
+    validations:
+      required: true
+  - type: textarea
+    id: feature
+    attributes:
+      label: Proposed solution
+      description: A clear description of the feature or improvement you are requesting.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any alternative solutions or workarounds you have considered.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Any additional context, screenshots, or examples.
