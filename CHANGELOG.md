@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0 (2026-11-28)
+
+
+### Documentation
+
+* add contributor and community guides ([#12](https://github.com/mehmetkr/triggerdev-python/issues/12)) ([75d2e55](https://github.com/mehmetkr/triggerdev-python/commit/75d2e55ea14238fe7018d63e084c0557bab26e4e))
+
+## Changelog
+
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
