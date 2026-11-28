@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Trigger.dev documentation
+    url: https://trigger.dev/docs
+    about: For questions about the Trigger.dev platform or API, check the official documentation.
